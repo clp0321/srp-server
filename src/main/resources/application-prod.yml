@@ -1,0 +1,33 @@
+#server:
+#  port: 8989
+#encrypt-type: # 0:standard, 1:guomi
+#  encrypt-type: 0
+#
+#spring:
+#  profiles:
+#    active: prod
+#
+#group-channel-connections-config:
+#  caCert: classpath:ca.crt
+#  sslCert: classpath:sdk.crt
+#  sslKey: classpath:sdk.key
+#  all-channel-connections:
+#  - group-id: 1 #group ID
+#    connections-str:
+#    - 202.193.60.231:20200 # node listen_ip:channel_listen_port
+#    - 202.193.60.231:20201
+#  - group-id: 2
+#    connections-str:
+#    - 202.193.60.231:20202 # node listen_ip:channel_listen_port
+#    - 202.193.60.231:20203
+#    enabled: false
+#
+#channel-service:
+#  group-id: 1 # The specified group to which the SDK connects
+#  agency-name: fisco # agency name
+#  enabled: false
+#
+#accounts:
+#  pem-file: 0xcdcce60801c0a2e6bb534322c32ae528b9dec8d2.pem
+#  p12-file: 0x98333491efac02f8ce109b0c499074d47e7779a6.p12
+#  password: 123456

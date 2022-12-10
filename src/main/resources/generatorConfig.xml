@@ -1,0 +1,43 @@
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<!--suppress MybatisGenerateCustomPluginInspection -->
+<generatorConfiguration>
+    <properties resource="application-xiang.properties"/>
+
+    <context id="mbg" targetRuntime="MyBatis3DynamicSQL">
+
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="${spring.datasource.driver-class-name}"
+                        connectionURL="${spring.datasource.url}"
+                        userId="${spring.datasource.username}"
+                        password="${spring.datasource.password}">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.srp.server.demandPublish.model"
+                            targetProject="src/main/java">
+            <property name="enableSubPackages" value="false"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <javaClientGenerator type="ANNOTATEDMAPPER"
+                             targetPackage="com.srp.server.demandPublish.dao"
+                             targetProject="src/main/java">
+            <property name="enableSubPackages" value="false"/>
+        </javaClientGenerator>
+
+        <!--数据表配置-->
+<!--        <table tableName="user_detail" domainObjectName="UserDetail">-->
+<!--            <generatedKey column = "id" sqlStatement = "MySQL" />-->
+<!--        </table>-->
+
+        <table tableName="demand_tenant" domainObjectName="DemandTenant">
+            <generatedKey column = "id" sqlStatement = "MySQL" />
+        </table>
+
+    </context>
+</generatorConfiguration>

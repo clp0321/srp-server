@@ -1,0 +1,29 @@
+-- /**
+--     撤销houseid 外键删除 hosue_rent表
+--  */
+-- /**
+--    删除hosue_device外键
+--  */
+-- alter table house_device drop foreign key house_device_house_rent_house_id_fk;
+-- /**
+--     删除house_control 外键
+--  */
+--  alter table house_control drop foreign key house_control_house_rent_house_id_fk;
+-- /**
+--     删除house_review 外键
+--  */
+--  alter table house_review drop foreign key house_review_house_rent_house_id_fk;
+--  /**
+--     删除 house_revoke外键
+--   */
+--   alter table house_revoke drop foreign key house_revoke_house_rent_house_id_fk;
+-- /**
+--     删除house_transfer 外键
+--  */
+-- alter table house_transfer drop foreign key house_transfer_house_rent_house_id_fk;
+-- /**
+--     删除house_rent 表
+--  */
+--  drop table house_rent;
+
+

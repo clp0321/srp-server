@@ -1,0 +1,16 @@
+#server:
+#  port: 8989
+#encrypt-type: # 0:standard, 1:guomi
+#  encrypt-type: 0
+#
+spring:
+  profiles:
+    active: dev
+
+logging:
+  level:
+    io:
+      swagger:
+        models:
+          parameters:
+            AbstractSerializableParameter: ERROR
